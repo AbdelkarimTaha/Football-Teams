@@ -1,0 +1,23 @@
+<div class="row">
+  <h2 class="col-md-3">Football Teams</h2>
+  <button *ngIf="isAdmin" class="btn btn-primary col-md-2" (click)="addTeam()">Add Team</button>
+</div>
+
+
+<div class="container pt-5">
+  <div class="teams">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let team of teams">
+            <div class="player">
+                <img src="{{team.logoUrl}}" alt="">
+                <h2>{{team.name}}</h2>
+                <p>{{team.country}}</p>
+                <button class="btn btn-info" style="margin-right: 5px;" (click)="teamDetails(team.id)">Details</button>
+                <button *ngIf="isAdmin" class="btn btn-primary" style="margin-right: 5px;"  (click)="updateTeam(team.id)">Update</button>
+                <button *ngIf="isAdmin" class="btn btn-danger" style="margin-right: 5px;" (click)="deleteTeam(team.id)">Delete</button>
+            </div>
+
+        </div>
+      </div>
+  </div>
+</div>

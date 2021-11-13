@@ -1,0 +1,10 @@
+.form-inline{
+  display: inline-flex;
+}
+.pad{
+  margin-right: 5px;
+}
+
+.navbar .nav-link{
+  cursor: pointer !important;
+ }

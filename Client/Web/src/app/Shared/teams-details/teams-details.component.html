@@ -1,0 +1,34 @@
+<h2>Team Details</h2>
+
+<div class="teams">
+  <div class="row">
+    <div>
+      <div class="col-md-4">
+          <div class="player" *ngIf="{team}">
+              <img class="w-100" src="{{team.logoUrl}}" alt="">
+              <h2>{{team.name}}</h2>
+              <p>{{team.country}}</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <h2 class="col-md-3">Players</h2>
+</div>
+
+
+<div class="container pt-5">
+  <div class="players">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let player of team.players">
+              <div class="player">
+                  <img class="w-100" src="{{player.imageUrl}}" alt="">
+                  <h2>{{player.name}}</h2>
+                  <p>{{player.nationality}}</p>
+              </div>
+        </div>
+      </div>
+  </div>
+</div>

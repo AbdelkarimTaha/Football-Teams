@@ -1,0 +1,108 @@
+<h2>Create Team</h2>
+
+<form #loginForm = "ngForm" class="form-inline mt-2 mt-md-0"
+(ngSubmit) = "createTeam()">
+
+  <div class="row col-md-12">
+    <div class="col-md-3">
+      <input
+      name="name"
+      [(ngModel)]="model.name"
+      class="form-control col-md-3"
+      type="text"
+      placeholder="TeamName">
+    </div>
+
+
+    <div class="col-md-3">
+      <input
+      name="country"
+      [(ngModel)]="model.country"
+      class="form-control mr-sm-2 pad"
+      type="text"
+      placeholder="country">
+    </div>
+
+    <div class="col-md-3">
+      <input
+    name="foundationDate"
+    [(ngModel)]="model.foundationDate"
+    class="form-control mr-sm-2 pad"
+    type="date"
+    placeholder="foundation Date">
+    </div>
+
+
+    <div class="col-md-3">
+    <input
+    name="coachName"
+    [(ngModel)]="model.coachName"
+    class="form-control mr-sm-2 pad"
+    type="text"
+    placeholder="coachName">
+</div>
+
+<div class="col-md-3" style="margin-top: 10px;">
+    <input
+    name="logoUrl"
+    [(ngModel)]="model.logoUrl"
+    class="form-control mr-sm-2 pad"
+    type="text"
+    placeholder="logoUrl">
+</div>
+  </div>
+
+
+
+
+
+
+
+    <div *ngFor="let player of players">
+
+    <div class="row col-md-12" style="margin-top: 10px">
+      <div class="col-md-3">
+        <input
+          name="player.name"
+          [(ngModel)]="player.name"
+          class="form-control col-md-3"
+          type="text"
+          placeholder="Player Name">
+      </div>
+
+      <div class="col-md-3">
+        <input
+          name="player.dateOfBirth"
+          [(ngModel)]="player.dateOfBirth"
+          class="form-control col-md-3"
+          type="date"
+          placeholder="Player Date Of Birth">
+      </div>
+
+      <div class="col-md-3">
+        <input
+          name="player.nationality"
+          [(ngModel)]="player.nationality"
+          class="form-control col-md-3"
+          type="text"
+          placeholder="Player Nationality">
+      </div>
+
+      <div class="col-md-3">
+        <input
+          name="player.imageUrl"
+          [(ngModel)]="player.imageUrl"
+          class="form-control col-md-3"
+          type="text"
+          placeholder="Player Image">
+      </div>
+    </div>
+  </div>
+
+
+<div style="text-align: right;">
+  <a (click)="AddPlayer()" class="btn btn-danger my-2 my-sm-0 pad">Add Player</a>
+</div>
+  <button class="btn btn-success my-2 my-sm-0 pad" type="submit">Create</button>
+  <a (click)="Back()" class="btn btn-info" style="margin-left: 5px;">Back</a>
+</form>

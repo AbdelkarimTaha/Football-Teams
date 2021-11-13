@@ -1,0 +1,58 @@
+<h2>Update Team</h2>
+
+<form #loginForm = "ngForm" class="form-inline mt-2 mt-md-0"
+(ngSubmit) = "updateTeam()">
+
+  <div class="row col-md-12">
+    <div class="col-md-3">
+      <input
+      name="name"
+      [(ngModel)]="team.name"
+      class="form-control col-md-3"
+      type="text"
+      placeholder="TeamName">
+    </div>
+
+
+    <div class="col-md-3">
+      <input
+      name="country"
+      [(ngModel)]="team.country"
+      class="form-control mr-sm-2 pad"
+      type="text"
+      placeholder="country">
+    </div>
+
+    <div class="col-md-3">
+      <input
+      name="foundationDate"
+      [(ngModel)]="team.foundationDate"
+      class="form-control mr-sm-2 pad"
+      type="date"
+      placeholder="foundation Date">
+    </div>
+
+
+    <div class="col-md-3">
+      <input
+      name="coachName"
+      [(ngModel)]="team.coachName"
+      class="form-control mr-sm-2 pad"
+      type="text"
+      placeholder="coachName">
+    </div>
+
+<div class="col-md-3" style="margin-top: 10px;">
+    <input
+    name="logoUrl"
+    [(ngModel)]="team.logoUrl"
+    class="form-control mr-sm-2 pad"
+    type="text"
+    placeholder="logoUrl">
+</div>
+  </div>
+
+
+  <button class="btn btn-success my-2 my-sm-0 pad" type="submit">Update</button>
+  <a (click)="Back()" class="btn btn-info" style="margin-left: 5px;">Back</a>
+</form>

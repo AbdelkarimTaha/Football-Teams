@@ -1,0 +1,13 @@
+.player{
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 10px;
+  margin: 0 0 20px;
+  padding: 20px;
+}
+
+.player img{
+  width: 180px;
+  height: 210px;
+  display: block;
+  margin: 10px auto;
+}

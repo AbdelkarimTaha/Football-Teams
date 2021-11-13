@@ -1,0 +1,22 @@
+<div class="row">
+  <h2 class="col-md-2">Players</h2>
+  <button *ngIf="isAdmin" class="btn btn-primary col-md-2" (click)="addplayer()">Add Player</button>
+</div>
+
+
+<div class="container pt-5">
+  <div class="players">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let player of players">
+              <div class="player">
+                  <img class="w-100" src="{{player.imageUrl}}" alt="">
+                  <h2>{{player.name}}</h2>
+                  <p>{{player.nationality}}</p>
+                  <button class="btn btn-info" style="margin-right: 5px;" (click)="playerDetails(player.id)">Details</button>
+                  <button *ngIf="isAdmin" class="btn btn-primary" style="margin-right: 5px;"  (click)="updatePlayer(player.id)">Update</button>
+                  <button *ngIf="isAdmin" class="btn btn-danger" style="margin-right: 5px;" (click)="deletePlayer(player.id)">Delete</button>
+              </div>
+        </div>
+      </div>
+  </div>
+</div>
